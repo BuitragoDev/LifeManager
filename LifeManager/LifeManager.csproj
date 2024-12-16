@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC7F1CC1-19DF-42EB-9D85-DF0845DACDA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LifeManager</RootNamespace>
+    <AssemblyName>LifeManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\LibroDatos.cs" />
+    <Compile Include="Datos\NotaDatos.cs" />
+    <Compile Include="Datos\PasswordDatos.cs" />
+    <Compile Include="Datos\PeliculaDatos.cs" />
+    <Compile Include="Datos\SerieDatos.cs" />
+    <Compile Include="Entidades\Libro.cs" />
+    <Compile Include="Entidades\Nota.cs" />
+    <Compile Include="Entidades\Password.cs" />
+    <Compile Include="Entidades\Pelicula.cs" />
+    <Compile Include="Entidades\Serie.cs" />
+    <Compile Include="Logica\PasswordLogica.cs" />
+    <Compile Include="Vista\frmCrearPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCrearPassword.Designer.cs">
+      <DependentUpon>frmCrearPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPasswords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPasswords.Designer.cs">
+      <DependentUpon>frmPasswords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\LibroLogica.cs" />
+    <Compile Include="Logica\NotaLogica.cs" />
+    <Compile Include="Logica\PeliculaLogica.cs" />
+    <Compile Include="Logica\SerieLogica.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBooks.Designer.cs">
+      <DependentUpon>frmBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmContenedor.Designer.cs">
+      <DependentUpon>frmContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCrearLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCrearLibro.Designer.cs">
+      <DependentUpon>frmCrearLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCrearNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCrearNota.Designer.cs">
+      <DependentUpon>frmCrearNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCrearPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCrearPelicula.Designer.cs">
+      <DependentUpon>frmCrearPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCrearSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCrearSerie.Designer.cs">
+      <DependentUpon>frmCrearSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMovies.Designer.cs">
+      <DependentUpon>frmMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmNotes.Designer.cs">
+      <DependentUpon>frmNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmSeries.Designer.cs">
+      <DependentUpon>frmSeries.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\favicon.png" />
+    <EmbeddedResource Include="Vista\frmCrearPassword.resx">
+      <DependentUpon>frmCrearPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPasswords.resx">
+      <DependentUpon>frmPasswords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCrearSerie.resx">
+      <DependentUpon>frmCrearSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmSeries.resx">
+      <DependentUpon>frmSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\peliculas_icon.png" />
+    <None Include="Resources\imagen_icon.png" />
+    <None Include="Resources\calendario_icon.png" />
+    <None Include="Resources\libros_icon.png" />
+    <None Include="Resources\libreta_icon.png" />
+    <None Include="Resources\chincheta_icon.png" />
+    <None Include="Resources\sonidoClick.wav" />
+    <None Include="Resources\color_icon.png" />
+    <None Include="Resources\negrita_icon.png" />
+    <None Include="Resources\fuente_icon.png" />
+    <None Include="Resources\cursiva_icon.png" />
+    <None Include="Resources\recargar_icon.png" />
+    <None Include="Resources\limpiar_icon.png" />
+    <None Include="Resources\guardar_icon.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmBooks.resx">
+      <DependentUpon>frmBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmContenedor.resx">
+      <DependentUpon>frmContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCrearLibro.resx">
+      <DependentUpon>frmCrearLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCrearNota.resx">
+      <DependentUpon>frmCrearNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCrearPelicula.resx">
+      <DependentUpon>frmCrearPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMovies.resx">
+      <DependentUpon>frmMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmNotes.resx">
+      <DependentUpon>frmNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="favicon.ico" />
+    <Content Include="lifeManagerDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movies_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tvseries_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar_ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>
